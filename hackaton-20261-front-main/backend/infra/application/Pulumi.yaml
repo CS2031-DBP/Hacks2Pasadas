@@ -1,0 +1,6 @@
+name: tropelcare-application
+runtime:
+  name: nodejs
+  options:
+    typescript: true
+description: Setup job, API, dashboard and alerts

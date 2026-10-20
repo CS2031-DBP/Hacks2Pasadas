@@ -1,0 +1,651 @@
+{
+  "/dashboard/summary": {
+    "totalTropels": 120,
+    "criticalTropels": 24,
+    "openSignals": 397,
+    "sectorStabilityAvg": 67.6,
+    "signalsBySeverity": {
+      "LEVE": 108,
+      "MODERADO": 102,
+      "GRAVE": 111,
+      "CRITICO": 76
+    },
+    "generatedAt": "2026-10-19T23:52:39.591Z"
+  },
+  "/tropels?size=10&species=": {
+    "content": [
+      {
+        "id": "trp_001_111",
+        "name": "Nube-111",
+        "species": "GLITCHY",
+        "vitalState": "HAMBRIENTO",
+        "energyLevel": 54,
+        "chaosIndex": 77,
+        "mutationStage": 0,
+        "guardianName": "Alan",
+        "sector": {
+          "id": "sec_001_03",
+          "name": "Sector 03",
+          "sectorCode": "SEC-03"
+        },
+        "createdAt": "2026-06-01T15:42:00.000Z",
+        "updatedAt": "2026-06-02T14:48:18.911Z"
+      },
+      {
+        "id": "trp_001_120",
+        "name": "Pixel-120",
+        "species": "BLOBITO",
+        "vitalState": "HAMBRIENTO",
+        "energyLevel": 57,
+        "chaosIndex": 56,
+        "mutationStage": 3,
+        "guardianName": "Grace",
+        "sector": {
+          "id": "sec_001_12",
+          "name": "Sector 12",
+          "sectorCode": "SEC-12"
+        },
+        "createdAt": "2026-06-01T16:00:00.000Z",
+        "updatedAt": "2026-06-02T14:16:15.352Z"
+      },
+      {
+        "id": "trp_001_092",
+        "name": "Chispa-092",
+        "species": "GLITCHY",
+        "vitalState": "AGITADO",
+        "energyLevel": 89,
+        "chaosIndex": 75,
+        "mutationStage": 4,
+        "guardianName": "Ken",
+        "sector": {
+          "id": "sec_001_08",
+          "name": "Sector 08",
+          "sectorCode": "SEC-08"
+        },
+        "createdAt": "2026-06-01T15:04:00.000Z",
+        "updatedAt": "2026-06-02T14:13:00.113Z"
+      },
+      {
+        "id": "trp_001_116",
+        "name": "Chispa-116",
+        "species": "BLOBITO",
+        "vitalState": "HAMBRIENTO",
+        "energyLevel": 30,
+        "chaosIndex": 63,
+        "mutationStage": 3,
+        "guardianName": "Ada",
+        "sector": {
+          "id": "sec_001_08",
+          "name": "Sector 08",
+          "sectorCode": "SEC-08"
+        },
+        "createdAt": "2026-06-01T15:52:00.000Z",
+        "updatedAt": "2026-06-02T13:50:56.606Z"
+      },
+      {
+        "id": "trp_001_088",
+        "name": "Nube-088",
+        "species": "CHISPA",
+        "vitalState": "CRITICO",
+        "energyLevel": 63,
+        "chaosIndex": 71,
+        "mutationStage": 1,
+        "guardianName": "Linus",
+        "sector": {
+          "id": "sec_001_04",
+          "name": "Sector 04",
+          "sectorCode": "SEC-04"
+        },
+        "createdAt": "2026-06-01T14:56:00.000Z",
+        "updatedAt": "2026-06-02T13:39:30.489Z"
+      },
+      {
+        "id": "trp_001_100",
+        "name": "Pixel-100",
+        "species": "CHISPA",
+        "vitalState": "MUTANDO",
+        "energyLevel": 5,
+        "chaosIndex": 92,
+        "mutationStage": 2,
+        "guardianName": "Barbara",
+        "sector": {
+          "id": "sec_001_04",
+          "name": "Sector 04",
+          "sectorCode": "SEC-04"
+        },
+        "createdAt": "2026-06-01T15:20:00.000Z",
+        "updatedAt": "2026-06-02T13:18:57.662Z"
+      },
+      {
+        "id": "trp_001_074",
+        "name": "Tropi-074",
+        "species": "BLOBITO",
+        "vitalState": "ESTABLE",
+        "energyLevel": 73,
+        "chaosIndex": 36,
+        "mutationStage": 0,
+        "guardianName": "Grace",
+        "sector": {
+          "id": "sec_001_02",
+          "name": "Sector 02",
+          "sectorCode": "SEC-02"
+        },
+        "createdAt": "2026-06-01T14:28:00.000Z",
+        "updatedAt": "2026-06-02T13:03:12.812Z"
+      },
+      {
+        "id": "trp_001_057",
+        "name": "Glitch-057",
+        "species": "CHISPA",
+        "vitalState": "AGITADO",
+        "energyLevel": 76,
+        "chaosIndex": 26,
+        "mutationStage": 2,
+        "guardianName": "Barbara",
+        "sector": {
+          "id": "sec_001_09",
+          "name": "Sector 09",
+          "sectorCode": "SEC-09"
+        },
+        "createdAt": "2026-06-01T13:54:00.000Z",
+        "updatedAt": "2026-06-02T12:55:15.737Z"
+      },
+      {
+        "id": "trp_001_037",
+        "name": "Chispa-037",
+        "species": "CHISPA",
+        "vitalState": "CRITICO",
+        "energyLevel": 5,
+        "chaosIndex": 13,
+        "mutationStage": 1,
+        "guardianName": "Edsger",
+        "sector": {
+          "id": "sec_001_01",
+          "name": "Sector 01",
+          "sectorCode": "SEC-01"
+        },
+        "createdAt": "2026-06-01T13:14:00.000Z",
+        "updatedAt": "2026-06-02T12:54:10.375Z"
+      },
+      {
+        "id": "trp_001_117",
+        "name": "Chispa-117",
+        "species": "GRUNON",
+        "vitalState": "HAMBRIENTO",
+        "energyLevel": 2,
+        "chaosIndex": 25,
+        "mutationStage": 5,
+        "guardianName": "Edsger",
+        "sector": {
+          "id": "sec_001_09",
+          "name": "Sector 09",
+          "sectorCode": "SEC-09"
+        },
+        "createdAt": "2026-06-01T15:54:00.000Z",
+        "updatedAt": "2026-06-02T12:53:42.976Z"
+      }
+    ],
+    "totalElements": 120,
+    "totalPages": 12,
+    "currentPage": 0,
+    "size": 10
+  },
+  "/signals/feed?limit=15&status=": {
+    "items": [
+      {
+        "id": "sig_001_0600",
+        "signalType": "SENAL_CORRUPTA",
+        "severity": "MODERADO",
+        "status": "PROCESANDO",
+        "rawContent": "Patron senal_corrupta detectado por el protocolo del Sector 12.",
+        "tropel": {
+          "id": "trp_001_120",
+          "name": "Pixel-120",
+          "species": "BLOBITO"
+        },
+        "createdAt": "2026-06-02T18:00:00.000Z",
+        "updatedAt": "2026-06-02T18:00:00.000Z"
+      },
+      {
+        "id": "sig_001_0599",
+        "signalType": "ABANDONO",
+        "severity": "GRAVE",
+        "status": "PROCESANDO",
+        "rawContent": "Patron abandono detectado por el protocolo del Sector 11.",
+        "tropel": {
+          "id": "trp_001_119",
+          "name": "Tropi-119",
+          "species": "BLOBITO"
+        },
+        "createdAt": "2026-06-02T17:57:00.000Z",
+        "updatedAt": "2026-06-02T17:57:00.000Z"
+      },
+      {
+        "id": "sig_001_0598",
+        "signalType": "ABANDONO",
+        "severity": "GRAVE",
+        "status": "ATENDIDA",
+        "rawContent": "Patron abandono detectado por el protocolo del Sector 10.",
+        "tropel": {
+          "id": "trp_001_118",
+          "name": "Pixel-118",
+          "species": "CHISPA"
+        },
+        "createdAt": "2026-06-02T17:54:00.000Z",
+        "updatedAt": "2026-06-02T17:54:00.000Z"
+      },
+      {
+        "id": "sig_001_0597",
+        "signalType": "FUGA",
+        "severity": "LEVE",
+        "status": "ATENDIDA",
+        "rawContent": "Patron fuga detectado por el protocolo del Sector 09.",
+        "tropel": {
+          "id": "trp_001_117",
+          "name": "Chispa-117",
+          "species": "GRUNON"
+        },
+        "createdAt": "2026-06-02T17:51:00.000Z",
+        "updatedAt": "2026-06-02T17:51:00.000Z"
+      },
+      {
+        "id": "sig_001_0596",
+        "signalType": "MUTACION",
+        "severity": "MODERADO",
+        "status": "ATENDIDA",
+        "rawContent": "Patron mutacion detectado por el protocolo del Sector 08.",
+        "tropel": {
+          "id": "trp_001_116",
+          "name": "Chispa-116",
+          "species": "BLOBITO"
+        },
+        "createdAt": "2026-06-02T17:48:00.000Z",
+        "updatedAt": "2026-06-02T17:48:00.000Z"
+      },
+      {
+        "id": "sig_001_0595",
+        "signalType": "ABANDONO",
+        "severity": "GRAVE",
+        "status": "ATENDIDA",
+        "rawContent": "Patron abandono detectado por el protocolo del Sector 07.",
+        "tropel": {
+          "id": "trp_001_115",
+          "name": "Pixel-115",
+          "species": "GLITCHY"
+        },
+        "createdAt": "2026-06-02T17:45:00.000Z",
+        "updatedAt": "2026-06-02T17:45:00.000Z"
+      },
+      {
+        "id": "sig_001_0594",
+        "signalType": "ABANDONO",
+        "severity": "LEVE",
+        "status": "RECIBIDA",
+        "rawContent": "Patron abandono detectado por el protocolo del Sector 06.",
+        "tropel": {
+          "id": "trp_001_114",
+          "name": "Glitch-114",
+          "species": "GLITCHY"
+        },
+        "createdAt": "2026-06-02T17:42:00.000Z",
+        "updatedAt": "2026-06-02T17:42:00.000Z"
+      },
+      {
+        "id": "sig_001_0593",
+        "signalType": "SENAL_CORRUPTA",
+        "severity": "CRITICO",
+        "status": "ATENDIDA",
+        "rawContent": "Patron senal_corrupta detectado por el protocolo del Sector 05.",
+        "tropel": {
+          "id": "trp_001_113",
+          "name": "Glitch-113",
+          "species": "CHISPA"
+        },
+        "createdAt": "2026-06-02T17:39:00.000Z",
+        "updatedAt": "2026-06-02T17:39:00.000Z"
+      },
+      {
+        "id": "sig_001_0592",
+        "signalType": "REPRODUCCION_MASIVA",
+        "severity": "MODERADO",
+        "status": "ATENDIDA",
+        "rawContent": "Patron reproduccion_masiva detectado por el protocolo del Sector 04.",
+        "tropel": {
+          "id": "trp_001_112",
+          "name": "Tropi-112",
+          "species": "GRUNON"
+        },
+        "createdAt": "2026-06-02T17:36:00.000Z",
+        "updatedAt": "2026-06-02T17:36:00.000Z"
+      },
+      {
+        "id": "sig_001_0591",
+        "signalType": "FUGA",
+        "severity": "MODERADO",
+        "status": "PROCESANDO",
+        "rawContent": "Patron fuga detectado por el protocolo del Sector 03.",
+        "tropel": {
+          "id": "trp_001_111",
+          "name": "Nube-111",
+          "species": "GLITCHY"
+        },
+        "createdAt": "2026-06-02T17:33:00.000Z",
+        "updatedAt": "2026-06-02T17:33:00.000Z"
+      },
+      {
+        "id": "sig_001_0590",
+        "signalType": "REPRODUCCION_MASIVA",
+        "severity": "CRITICO",
+        "status": "ATENDIDA",
+        "rawContent": "Patron reproduccion_masiva detectado por el protocolo del Sector 02.",
+        "tropel": {
+          "id": "trp_001_110",
+          "name": "Tropi-110",
+          "species": "GLITCHY"
+        },
+        "createdAt": "2026-06-02T17:30:00.000Z",
+        "updatedAt": "2026-06-02T17:30:00.000Z"
+      },
+      {
+        "id": "sig_001_0589",
+        "signalType": "REPRODUCCION_MASIVA",
+        "severity": "GRAVE",
+        "status": "ATENDIDA",
+        "rawContent": "Patron reproduccion_masiva detectado por el protocolo del Sector 01.",
+        "tropel": {
+          "id": "trp_001_109",
+          "name": "Chispa-109",
+          "species": "GLITCHY"
+        },
+        "createdAt": "2026-06-02T17:27:00.000Z",
+        "updatedAt": "2026-06-02T17:27:00.000Z"
+      },
+      {
+        "id": "sig_001_0588",
+        "signalType": "ABANDONO",
+        "severity": "LEVE",
+        "status": "ATENDIDA",
+        "rawContent": "Patron abandono detectado por el protocolo del Sector 12.",
+        "tropel": {
+          "id": "trp_001_108",
+          "name": "Pixel-108",
+          "species": "DORMILON"
+        },
+        "createdAt": "2026-06-02T17:24:00.000Z",
+        "updatedAt": "2026-06-02T17:24:00.000Z"
+      },
+      {
+        "id": "sig_001_0587",
+        "signalType": "SENAL_CORRUPTA",
+        "severity": "LEVE",
+        "status": "RECIBIDA",
+        "rawContent": "Patron senal_corrupta detectado por el protocolo del Sector 11.",
+        "tropel": {
+          "id": "trp_001_107",
+          "name": "Chispa-107",
+          "species": "DORMILON"
+        },
+        "createdAt": "2026-06-02T17:21:00.000Z",
+        "updatedAt": "2026-06-02T17:21:00.000Z"
+      },
+      {
+        "id": "sig_001_0586",
+        "signalType": "ABANDONO",
+        "severity": "GRAVE",
+        "status": "ATENDIDA",
+        "rawContent": "Patron abandono detectado por el protocolo del Sector 10.",
+        "tropel": {
+          "id": "trp_001_106",
+          "name": "Nube-106",
+          "species": "GLITCHY"
+        },
+        "createdAt": "2026-06-02T17:18:00.000Z",
+        "updatedAt": "2026-06-02T17:18:00.000Z"
+      }
+    ],
+    "nextCursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTA2LTAyVDE3OjE4OjAwLjAwMFoiLCJpZCI6InNpZ18wMDFfMDU4NiIsImZpbHRlcnNIYXNoIjoiVDFQTm9Zd3JxZ3dEVkx0Zm1qN0w1ZTBTcTAyT0VicUhQQzhSRmhJQ3VVVSJ9.HBEELC-PjsS9RzG38uqLYAoKhetksZII1T307V-zggk",
+    "hasMore": true,
+    "totalEstimate": 600
+  },
+  "/sectors": {
+    "items": [
+      {
+        "id": "sec_001_01",
+        "sectorCode": "SEC-01",
+        "name": "Sector 01",
+        "climate": "PIXEL_FOREST",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 70
+      },
+      {
+        "id": "sec_001_02",
+        "sectorCode": "SEC-02",
+        "name": "Sector 02",
+        "climate": "NEON_CAVE",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 87
+      },
+      {
+        "id": "sec_001_03",
+        "sectorCode": "SEC-03",
+        "name": "Sector 03",
+        "climate": "CLOUD_AQUARIUM",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 74
+      },
+      {
+        "id": "sec_001_04",
+        "sectorCode": "SEC-04",
+        "name": "Sector 04",
+        "climate": "RETRO_ARCADE",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 73
+      },
+      {
+        "id": "sec_001_05",
+        "sectorCode": "SEC-05",
+        "name": "Sector 05",
+        "climate": "PIXEL_FOREST",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 45
+      },
+      {
+        "id": "sec_001_06",
+        "sectorCode": "SEC-06",
+        "name": "Sector 06",
+        "climate": "NEON_CAVE",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 85
+      },
+      {
+        "id": "sec_001_07",
+        "sectorCode": "SEC-07",
+        "name": "Sector 07",
+        "climate": "CLOUD_AQUARIUM",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 44
+      },
+      {
+        "id": "sec_001_08",
+        "sectorCode": "SEC-08",
+        "name": "Sector 08",
+        "climate": "RETRO_ARCADE",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 48
+      },
+      {
+        "id": "sec_001_09",
+        "sectorCode": "SEC-09",
+        "name": "Sector 09",
+        "climate": "PIXEL_FOREST",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 95
+      },
+      {
+        "id": "sec_001_10",
+        "sectorCode": "SEC-10",
+        "name": "Sector 10",
+        "climate": "NEON_CAVE",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 42
+      },
+      {
+        "id": "sec_001_11",
+        "sectorCode": "SEC-11",
+        "name": "Sector 11",
+        "climate": "CLOUD_AQUARIUM",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 74
+      },
+      {
+        "id": "sec_001_12",
+        "sectorCode": "SEC-12",
+        "name": "Sector 12",
+        "climate": "RETRO_ARCADE",
+        "capacity": 20,
+        "currentLoad": 10,
+        "stabilityLevel": 74
+      }
+    ]
+  },
+  "/sectors/sec_001_01/story": {
+    "sector": {
+      "id": "sec_001_01",
+      "name": "Sector 01",
+      "climate": "PIXEL_FOREST"
+    },
+    "stages": [
+      {
+        "id": "stage_001_01_0",
+        "order": 0,
+        "title": "Primer pulso",
+        "narrative": "Primer pulso en el Sector 01: abandono altera el ritmo de los Tropeles.",
+        "dominantEvent": "ABANDONO",
+        "metrics": {
+          "stability": 62,
+          "energy": 42,
+          "alerts": 1
+        },
+        "assetKey": "pixel_forest-stage-1",
+        "colorToken": "emerald",
+        "progress": 0
+      },
+      {
+        "id": "stage_001_01_1",
+        "order": 1,
+        "title": "Ecos del sector",
+        "narrative": "Ecos del sector en el Sector 01: mutacion altera el ritmo de los Tropeles.",
+        "dominantEvent": "MUTACION",
+        "metrics": {
+          "stability": 65,
+          "energy": 51,
+          "alerts": 3
+        },
+        "assetKey": "pixel_forest-stage-2",
+        "colorToken": "violet",
+        "progress": 0.1429
+      },
+      {
+        "id": "stage_001_01_2",
+        "order": 2,
+        "title": "Energia inestable",
+        "narrative": "Energia inestable en el Sector 01: fuga altera el ritmo de los Tropeles.",
+        "dominantEvent": "FUGA",
+        "metrics": {
+          "stability": 68,
+          "energy": 60,
+          "alerts": 5
+        },
+        "assetKey": "pixel_forest-stage-3",
+        "colorToken": "cyan",
+        "progress": 0.2857
+      },
+      {
+        "id": "stage_001_01_3",
+        "order": 3,
+        "title": "Rastro de caos",
+        "narrative": "Rastro de caos en el Sector 01: conflicto altera el ritmo de los Tropeles.",
+        "dominantEvent": "CONFLICTO",
+        "metrics": {
+          "stability": 71,
+          "energy": 69,
+          "alerts": 7
+        },
+        "assetKey": "pixel_forest-stage-4",
+        "colorToken": "amber",
+        "progress": 0.4286
+      },
+      {
+        "id": "stage_001_01_4",
+        "order": 4,
+        "title": "Punto de quiebre",
+        "narrative": "Punto de quiebre en el Sector 01: reproduccion_masiva altera el ritmo de los Tropeles.",
+        "dominantEvent": "REPRODUCCION_MASIVA",
+        "metrics": {
+          "stability": 74,
+          "energy": 78,
+          "alerts": 9
+        },
+        "assetKey": "pixel_forest-stage-5",
+        "colorToken": "rose",
+        "progress": 0.5714
+      },
+      {
+        "id": "stage_001_01_5",
+        "order": 5,
+        "title": "Respuesta del habitat",
+        "narrative": "Respuesta del habitat en el Sector 01: senal_corrupta altera el ritmo de los Tropeles.",
+        "dominantEvent": "SENAL_CORRUPTA",
+        "metrics": {
+          "stability": 77,
+          "energy": 87,
+          "alerts": 11
+        },
+        "assetKey": "pixel_forest-stage-6",
+        "colorToken": "indigo",
+        "progress": 0.7143
+      },
+      {
+        "id": "stage_001_01_6",
+        "order": 6,
+        "title": "Equilibrio emergente",
+        "narrative": "Equilibrio emergente en el Sector 01: hambre altera el ritmo de los Tropeles.",
+        "dominantEvent": "HAMBRE",
+        "metrics": {
+          "stability": 80,
+          "energy": 35,
+          "alerts": 1
+        },
+        "assetKey": "pixel_forest-stage-7",
+        "colorToken": "lime",
+        "progress": 0.8571
+      },
+      {
+        "id": "stage_001_01_7",
+        "order": 7,
+        "title": "Nuevo ciclo",
+        "narrative": "Nuevo ciclo en el Sector 01: abandono altera el ritmo de los Tropeles.",
+        "dominantEvent": "ABANDONO",
+        "metrics": {
+          "stability": 83,
+          "energy": 44,
+          "alerts": 3
+        },
+        "assetKey": "pixel_forest-stage-8",
+        "colorToken": "sky",
+        "progress": 1
+      }
+    ]
+  }
+}

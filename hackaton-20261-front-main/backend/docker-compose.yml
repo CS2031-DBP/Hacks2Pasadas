@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: tropelcare
+      POSTGRES_USER: tropelcare
+      POSTGRES_PASSWORD: tropelcare
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tropelcare -d tropelcare"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - tropelcare_pgdata:/var/lib/postgresql/data
+
+volumes:
+  tropelcare_pgdata:

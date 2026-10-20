@@ -1,0 +1,6 @@
+name: tropelcare-foundation
+runtime:
+  name: nodejs
+  options:
+    typescript: true
+description: Database, registry, secrets, identities and event budget

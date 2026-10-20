@@ -1,0 +1,47 @@
+import * as pulumi from '@pulumi/pulumi';
+import * as gcp from '@pulumi/gcp';
+import * as random from '@pulumi/random';
+const cfg=new pulumi.Config();
+const project=gcp.config.project!;
+if(!project)throw new Error('Set gcp:project');
+const region=gcp.config.region||'us-central1';
+const apis=['run.googleapis.com','sqladmin.googleapis.com','artifactregistry.googleapis.com','cloudbuild.googleapis.com','secretmanager.googleapis.com','monitoring.googleapis.com','billingbudgets.googleapis.com','iam.googleapis.com','logging.googleapis.com','storage.googleapis.com'].map(service=>new gcp.projects.Service(service.split('.')[0],{project,service,disableOnDestroy:false}));
+const repository=new gcp.artifactregistry.Repository('images',{project,location:region,repositoryId:'tropelcare',format:'DOCKER'},{dependsOn:apis});
+const builder=new gcp.serviceaccount.Account('builder',{project,accountId:'tropelcare-builder'},{dependsOn:apis});
+const sourceBucket=new gcp.storage.Bucket('build-source',{project,location:region,uniformBucketLevelAccess:true,publicAccessPrevention:'enforced',forceDestroy:true,lifecycleRules:[{action:{type:'Delete'},condition:{age:7}}]},{dependsOn:apis});
+const logBucket=new gcp.storage.Bucket('build-logs',{project,location:region,uniformBucketLevelAccess:true,publicAccessPrevention:'enforced',forceDestroy:true,lifecycleRules:[{action:{type:'Delete'},condition:{age:30}}]},{dependsOn:apis});
+new gcp.storage.BucketIAMMember('builder-source-reader',{bucket:sourceBucket.name,role:'roles/storage.objectViewer',member:pulumi.interpolate`serviceAccount:${builder.email}`});
+new gcp.storage.BucketIAMMember('builder-log-writer',{bucket:logBucket.name,role:'roles/storage.objectCreator',member:pulumi.interpolate`serviceAccount:${builder.email}`});
+new gcp.artifactregistry.RepositoryIamMember('builder-images',{project,location:region,repository:repository.name,role:'roles/artifactregistry.writer',member:pulumi.interpolate`serviceAccount:${builder.email}`});
+const runtime=new gcp.serviceaccount.Account('runtime',{project,accountId:'tropelcare-runtime'},{dependsOn:apis});
+const setup=new gcp.serviceaccount.Account('setup',{project,accountId:'tropelcare-setup'},{dependsOn:apis});
+for(const [name,account] of [['runtime',runtime],['setup',setup]] as const)new gcp.projects.IAMMember(`${name}-sql`,{project,role:'roles/cloudsql.client',member:pulumi.interpolate`serviceAccount:${account.email}`});
+const secrets:Record<string,pulumi.Output<string>>={};
+const values:Record<string,pulumi.Output<string>>={};
+for(const name of ['DB_PASSWORD','JWT_SECRET','ADMIN_TOKEN','CREDENTIALS_SECRET']){
+ const value=new random.RandomPassword(name.toLowerCase(),{length:48,special:false});
+ const secret=new gcp.secretmanager.Secret(name.toLowerCase(),{project,secretId:`tropelcare-${name.toLowerCase().replaceAll('_','-')}`,replication:{auto:{}}},{dependsOn:apis});
+ const version=new gcp.secretmanager.SecretVersion(`${name.toLowerCase()}-version`,{secret:secret.id,secretData:value.result});
+ secrets[name]=secret.secretId;values[name]=value.result;
+ for(const [label,account] of [['runtime',runtime],['setup',setup]] as const)new gcp.secretmanager.SecretIamMember(`${name}-${label}`,{project,secretId:secret.secretId,role:'roles/secretmanager.secretAccessor',member:pulumi.interpolate`serviceAccount:${account.email}`},{dependsOn:[version]});
+}
+const sql=new gcp.sql.DatabaseInstance('database',{project,region,databaseVersion:'POSTGRES_16',deletionProtection:false,settings:{tier:'db-custom-1-3840',edition:'ENTERPRISE',availabilityType:'ZONAL',diskSize:20,diskType:'PD_SSD',diskAutoresize:true,backupConfiguration:{enabled:true,pointInTimeRecoveryEnabled:true},ipConfiguration:{ipv4Enabled:true,authorizedNetworks:[]}}},{dependsOn:apis});
+const database=new gcp.sql.Database('tropelcare',{project,instance:sql.name,name:'tropelcare'});
+const dbUser=new gcp.sql.User('api-user',{project,instance:sql.name,name:'tropelcare_api',password:values.DB_PASSWORD});
+const billingAccount=cfg.require('billingAccount');
+const projectInfo=gcp.organizations.getProjectOutput({projectId:project});
+new gcp.billing.Budget('event-budget',{billingAccount,displayName:`TropelCare ${project}`,budgetFilter:{projects:[pulumi.interpolate`projects/${projectInfo.number}`]},amount:{specifiedAmount:{currencyCode:'USD',units:String(cfg.getNumber('budgetUsd')||50)}},thresholdRules:[{thresholdPercent:.5},{thresholdPercent:.9},{thresholdPercent:1}],allUpdatesRule:{disableDefaultIamRecipients:false}},{dependsOn:apis});
+export const repositoryUrl=pulumi.interpolate`${region}-docker.pkg.dev/${project}/${repository.repositoryId}`;
+export const sqlInstanceName=sql.name;
+export const connectionName=sql.connectionName;
+export const databaseName=database.name;
+export const databaseUser=dbUser.name;
+export const runtimeEmail=runtime.email;
+export const setupEmail=setup.email;
+export const secretNames=secrets;
+export const projectId=project;
+export const deploymentRegion=region;
+
+export const buildServiceAccount=builder.name;
+export const buildSourceBucket=sourceBucket.name;
+export const buildLogBucket=logBucket.name;
